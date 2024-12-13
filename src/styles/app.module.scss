@@ -1,0 +1,105 @@
+.wrapper {
+    display: flex;
+
+    main {
+        flex: 1;
+    }
+
+    .content {
+        width: 100%;
+        height: 100vh;
+        background-color: #f8f8f8;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: row;
+
+        .boxPropsUser {
+            width: 25rem;
+            height: 100%;
+            transition: width .5s ease;
+        }
+
+        .reduxBoxUser {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 5px;
+            background-image: linear-gradient(90deg, #7e1180, #4f1a43);
+            cursor: pointer;
+            position: relative;
+            transition: width .7s ease;
+    
+            .boxImg {
+                display: flex;
+                flex-direction: column;
+                background-color: #4f1a43;
+                padding: 2rem .3rem 2rem 2rem;
+                position: absolute;
+                z-index: 5;
+            
+                img {
+                    width: 1.5rem;
+                    z-index: 5;
+                    margin-left: .5rem;
+                }
+            }
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: #f8f8f8;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            overflow-y: auto;
+            
+            .barGradient {
+                width: 100%;
+                height: 2rem;
+                display: flex;
+                background-image: linear-gradient(90deg, #7e1180, #4f1a43);
+                box-shadow: 0px 1px 1px rgba(0,0,0,0.6);
+                align-items: center;
+                justify-content: center;
+                z-index: 2;
+
+                h1 {
+                    font-size: 1rem;
+                    color: #fff;
+                }
+            }
+            
+            .component {
+                width: 100%;
+                height: calc(100% - 2rem);
+                background-color: #f1f1f1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+        
+        .show {
+            width: calc(100% - 25rem);
+        }
+    }
+}
+
+@media (max-width: 1020px) {
+    .wrapper
+    .content
+    .boxPropsUser {
+        width: 100vh;
+    }
+
+    .wrapper
+    .content
+    .show {
+        width: 0%;
+    }
+}

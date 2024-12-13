@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html, body, #root, .App, main {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #F8F8F8;
+}
+
+@media (max-width: 1080px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 720px) {
+    html {
+        font-size: 86%;
+    }
+}
+
+@media (max-width: 420px) {
+    html {
+        font-size: 71%;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    font-family: Lexend, sans-serif;
+    color: var(--white);
+}
+
+p, span, label{
+    font-family: Lexend, sans-serif;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+h4 {
+    font-size: 0.8rem;
+}
+
+button {
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    user-select: none;
+    font-family: Lexend, sans-serif;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4f1a43;
+    color: #fff;
+    border-radius: 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+}

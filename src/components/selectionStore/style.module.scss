@@ -1,0 +1,138 @@
+.boxMasterDecision {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 5;
+
+    .boxDecision {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: .2rem;
+        z-index: 5;
+        gap: .5rem;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+        border-radius: 5px;
+
+        .boxHeader {
+            width: 100%;
+            background-color: #ffcc00;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1rem;
+            padding: .2rem;
+            border-radius: 5px;
+
+            img {
+                margin: 0 0 0 .2rem;
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
+            h1 {
+                width: 90%;
+                font-size: 1rem;
+                text-align: center;
+            }
+
+            span {
+                margin: 0 .2rem 0 0;
+            }
+            
+            .btnClose {
+                cursor: pointer;
+            }   
+        }
+
+        .boxWarning {
+            width: 100%;
+            height: auto;
+            margin: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1rem;
+
+            .boxSelector {
+                display: flex;
+                width: 90%;
+                flex-direction: column;
+                align-items: center;
+
+                p {
+                    margin-top: .3rem;
+                    font-size: .9rem;
+                    color: #d40311;
+                }
+            }
+
+            .boxButtons {
+                width: 90%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: .5rem;
+
+                button {
+                    width: 5rem;
+                    height: 1.5rem;
+                    background-color: #ffcc00;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: opacity .5s;
+                    opacity: .8;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 620px) {
+    .boxMasterDecision{
+        .boxDecision{
+            width: 80%;
+            
+            .boxHeader{
+                h1 {
+                    font-size: 1.5rem;
+                }
+
+                span {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .boxWarning{
+                span {
+                    font-size: 1.5rem;
+                }
+
+                .boxButtons {
+                    button {
+                        height: 2rem;
+                        width: 8rem;
+                    }
+                }
+            }
+        }
+    }
+}

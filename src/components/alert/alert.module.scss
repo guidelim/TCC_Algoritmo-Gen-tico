@@ -1,0 +1,61 @@
+.boxMaster {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 6;
+
+    .box_sucess, .box_warning, .box_error {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        justify-content: center;
+        padding: 1rem;
+        border-radius: 5px;
+        z-index: 5;
+        gap: .5rem;
+
+        span {
+            color: #fff;
+        }
+        
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    .box_sucess {
+        background-color: #339900;
+    }
+
+    .box_warning {
+        background-color: #c49c00;
+    }
+
+    .box_error {
+        background-color: #cc3300;
+    }
+
+    .btn {
+        cursor: pointer;
+    }    
+}
+
+
+@media (max-width: 620px) {
+    .boxMaster{
+        .box_sucess, .box_error, .box_warning {
+            span {
+                font-size: 1.5rem;
+            }
+
+            img {
+                width: 2.5rem;
+            }
+        }
+    }
+}

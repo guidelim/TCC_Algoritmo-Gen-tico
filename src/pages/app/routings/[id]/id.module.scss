@@ -1,0 +1,279 @@
+.allContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    .routeAll {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        height: 95%;
+        background-color: #fff;
+        box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+        border-radius: 5px;
+        overflow-y: auto;
+        overflow-x: auto;
+        align-items: center;
+        justify-content: center;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+        
+        &::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: #4f1a43;
+            border-radius: 2px;
+        }
+        
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+        }
+
+        .routeToLocal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 95%;
+            height: 95%;
+
+            img {
+                width: 3.5rem;
+            }
+
+            .tableRoute{
+                display: flex;
+                flex-direction: column;
+                background-color: #f1f1f1;
+                border-radius: 5px;
+                padding: .5rem;
+                align-items: center;
+
+                .tableHeader {
+                    display: flex;
+                    flex-direction: row;
+                    margin-bottom: .5rem;
+
+                    h1 {
+                        font-size: 1.5rem;
+                    }
+
+                    img {
+                        width: 2rem;
+                    }
+                }
+
+                .table {
+                    display: flex;
+                    flex-direction: column;
+                    width: 95%;
+                    height: 90%;
+                    overflow-y: auto;
+                    overflow-x: auto;
+
+                    &::-webkit-scrollbar {
+                        width: 5px;
+                    }
+
+                    &::-webkit-scrollbar-track {
+                        background-color: #f1f1f1;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background-color: #888;
+                        border-radius: 4px;
+                    }
+
+                    &::-webkit-scrollbar-thumb:hover {
+                        background-color: #555;
+                    }
+
+                    table {
+                        width: 100%;
+
+                        thead {
+                            background-color: #f8f8f8;
+                            color: #000;
+                            font-size: .8rem;
+                        }
+
+                        tbody {
+                            font-size: 1rem;
+
+                            tr {
+                                transition: background-color .3s ease-out;
+                                cursor: cell;
+
+                                &:hover {
+                                    background-color: #fff;
+                                    color: #000;
+                                }
+                                
+                                th {                        
+                                    border-bottom: 1px dotted #000;
+
+                                    img {
+                                        width: 1.2rem;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .boxLocal {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #f1f1f1;
+                padding: .5rem;
+                border-radius: 5px;
+                box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+                margin: .5rem 0;
+
+                h2 {
+                    font-size: 2rem;
+                }
+
+                h1 {
+                    font-size: 1.8rem;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .buttonNextStore {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                margin-top: 1rem;
+
+                button {
+                    padding: 1rem 2rem;
+                }
+            }
+        }
+    }
+}
+
+/*
+.blocoDivisor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1.5rem;
+    background-color: #A9D08E;
+    align-items: center;
+}
+
+.allContentMap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .roadVertical {
+        display: flex;
+        flex-direction: column;
+        width: 8rem;
+        height: 100%;
+        margin: 0 .5rem;
+    }
+
+    .dockInfosDirection {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blocoA, .blocoJ {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .roadVertical {
+            display: flex;
+            flex-direction: column;
+            width: 8rem;
+            height: 100%;
+            margin: 0 .5rem;
+        }
+
+        .blocoAVertical {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+
+            .storesInfos {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+
+                .storesBox {
+                    display: flex;
+                    flex-direction: row;
+                    height: 100%;
+
+                    .roadVertical {
+                        display: flex;
+                        flex-direction: column;
+                        width: 8rem;
+                        height: 100%;
+                        margin: 0 .5rem;
+                    }
+                }
+            }
+        }
+
+        .horizontalOrientacion {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+
+            .block {
+                display: flex;
+                height: 100%;
+                
+                span{
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #999;
+                    padding: 0 7.5rem;
+                    margin: 0 .5rem 0 0;
+                }
+            }
+
+            .propsHorizontal {
+                display: flex;
+                flex-direction: column;
+
+                .roadHorizontal {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    height: 8rem;
+                    margin: 0 0 .5rem 0;
+                }
+
+                .boxDocksHorizontal {
+                    display: flex;
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+}
+*/
