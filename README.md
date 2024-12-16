@@ -64,10 +64,22 @@ Os resultados obtidos demonstraram a eficácia da solução, com uma média de r
 
 ## **Contato**
 Para mais informações ou dúvidas, entre em contato:
-- **Email:** guilherme.l.lima1104@gmail.com
-- **LinkedIn:** [guidelim](https://linkedin.com/in/guidelim)
-- **GitHub:** [guidelim](https://github.com/seu-usuario)
 
+**Guilherme Luis de Lima**
+- **Email:** guilherme.l.lima1104@gmail.com
+- **LinkedIn:** [Guilherme Lima](https://linkedin.com/in/guidelim)
+- **GitHub:** [Guilherme Lima](https://github.com/guidelim)
+
+**Leonardo Finavaro**
+- **Email:** - leo.finavaro.lp@gmail.com
+- **LinkedIn:** [Leonardo Finavaro](https://linkedin.com/in/leonardo-finavaro-03121722b)
+- **GitHub:** [Leonardo Finavaro](https://github.com/LeonardoFinavaro)
+
+**Rafael Machiaveli**
+- **Email:** - rafaelmachiaveli@gmail.com
+- **LinkedIn:** [Rafael Machiaveli](https://linkedin.com/in/rafamachiaveli)
+- **GitHub:** [Rafael Machiaveli](https://github.com/rafamachiaveli)
+  
 --- 
 
 **Sinta-se à vontade para contribuir com sugestões ou melhorias!** 🚀
