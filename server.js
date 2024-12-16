@@ -5,8 +5,6 @@ const oracle = require('oracledb');
 var con;
 const next = require('next');
 const PORT = 14000;
-// const HOSTNAME='conferenciaxd.systempe.com.br';
-// const dev = false
 const HOSTNAME='localhost';
 const dev = process.env.NODE_ENV !== 'production'
 
@@ -51,40 +49,6 @@ const pathsHandler = {
         } catch (err) {
             console.log('(changePage) ' + err);
         }
-    },
-    'uploadSapFile': async (req, res, cookie) => {
-        let data = Buffer.alloc(0)
-        req.on('data', (frame) => {
-            data = Buffer.concat([data, frame])
-        })
-
-        req.on('end', async () => {
-            try {
-                data = JSON.parse(data);
-
-                for (const props of data) {
-                    if(props.UC !== undefined && props['Nome Recebedor'] !== undefined){
-                        const checkLojaUc = await con.execute(`SELECT LOJA FROM LR_CR_8011 WHERE UC='${props.UC}' AND LOJA='${props['Nome Recebedor']}'`);
-                        if(checkLojaUc.rows.length == 0){
-                            await con.execute(`INSERT INTO LR_CR_8011(
-                                UC, LOJA, IMPORTED_AT
-                            ) VALUES (
-                                TRIM('${props.UC}'),
-                                TRIM('${props['Nome Recebedor']}'),
-                                SYSDATE
-                            )`,[], {autoCommit: true});
-                        }
-                    }
-                }
-
-                res.statusCode = 200;
-                res.end();
-            } catch (err) {
-                console.log('(uploadSapFile) ' + err);
-                res.statusCode = 403;
-                res.end();
-            }
-        })
     },
     'getStoresAndLocations': async (req, res, cookie) => {
         try {
